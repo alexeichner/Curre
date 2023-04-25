@@ -36,11 +36,21 @@
                                     <action selector="startWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olb-G3-PyB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Gf-E0n">
+                                <rect key="frame" x="146" y="405" width="122" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="End Workout"/>
+                                <connections>
+                                    <action selector="endWorkoutFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHC-d6-NI5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="endWorkoutButton" destination="6nm-Gf-E0n" id="92i-YU-Nfc"/>
                         <outlet property="startButton" destination="tKa-qp-EVi" id="j9q-6p-efN"/>
                         <outlet property="timerLabel" destination="k98-Nl-iHB" id="yXt-6Q-CTa"/>
                     </connections>

@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var endWorkoutButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     var timer = Timer()
@@ -21,6 +22,10 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func endWorkoutFunction(_ sender: Any) {
+        
+    }
+    
     @IBAction func startWorkout(_ sender: Any) {
         // creates new workout!
         if isCounting {
