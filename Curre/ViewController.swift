@@ -14,12 +14,15 @@ class ViewController: UIViewController {
     var timer = Timer()
     var count = 0
     var isCounting = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
     @IBAction func startWorkout(_ sender: Any) {
+        // creates new workout!
         if isCounting {
             isCounting = false
             timer.invalidate() //stops the timer
