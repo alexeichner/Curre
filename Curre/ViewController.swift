@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             startButton.setTitle("START", for: .normal) //changes button text to start
         } else {
             isCounting = true
-            startButton.setTitle("STOP", for: .normal)
+            startButton.setTitle("PAUSE", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
