@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBAction func endWorkoutFunction(_ sender: Any) {
         isCounting = false
         timer.invalidate()
-        var newWorkout = Workout(duration: count, caloriesBurned: 1, distance: 1)
+        var newWorkout = Workout(duration: count, caloriesBurned: 1, distance: 1, averagePace: 1)
     }
     
     @IBAction func startWorkout(_ sender: Any) {
