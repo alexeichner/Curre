@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
-
-class WorkoutTable {
+class WorkoutTable: UITableViewController {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tableView = UITableView()
+        tableView.frame = .infinite
+    }
 }
