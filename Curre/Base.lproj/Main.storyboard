@@ -55,13 +55,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k98-Nl-iHB">
-                                <rect key="frame" x="20" y="151" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-qp-EVi">
                                 <rect key="frame" x="122" y="212" width="171" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -71,6 +64,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="START"/>
                                 <connections>
                                     <action selector="startWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olb-G3-PyB"/>
+                                    <action selector="startWorkout:" destination="gcg-n8-onb" eventType="touchUpInside" id="o06-gw-ShW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Gf-E0n">
@@ -79,16 +73,26 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="End Workout"/>
                                 <connections>
+                                    <action selector="endWorkoutFunction:" destination="gcg-n8-onb" eventType="touchUpInside" id="NM2-xC-rne"/>
                                     <action selector="endWorkoutFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHC-d6-NI5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k98-Nl-iHB">
+                                <rect key="frame" x="20" y="151" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9t2-id-rGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="MDX-TU-KJ3"/>
                     <connections>
-                        <outlet property="startButton" destination="tKa-qp-EVi" id="fLb-mx-cLd"/>
+                        <outlet property="endWorkoutButton" destination="6nm-Gf-E0n" id="ATJ-bV-hRp"/>
+                        <outlet property="startButton" destination="tKa-qp-EVi" id="nZg-39-7IR"/>
+                        <outlet property="timerLabel" destination="k98-Nl-iHB" id="x3U-GS-aeo"/>
                     </connections>
                 </viewController>
             </objects>

@@ -21,6 +21,7 @@ class Item1: UIViewController {
         super.viewDidLoad()
     }
 
+    
     @IBAction func endWorkoutFunction(_ sender: Any) {
         isCounting = false
         timer.invalidate()
@@ -28,7 +29,6 @@ class Item1: UIViewController {
     }
     
     @IBAction func startWorkout(_ sender: Any) {
-        // creates new workout!
         if isCounting {
             isCounting = false
             timer.invalidate() //stops the timer
