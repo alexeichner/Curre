@@ -33,7 +33,7 @@
         <!--Item 2-->
         <scene sceneID="8za-Vv-ciQ">
             <objects>
-                <viewController id="SWC-LH-sWi" sceneMemberID="viewController">
+                <viewController id="SWC-LH-sWi" customClass="WorkoutTable" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bl2-uA-wUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,12 +44,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgo-ba-xKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1587" y="492"/>
+            <point key="canvasLocation" x="-1588.4057971014495" y="491.51785714285711"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="sai-fl-Vhg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IwW-3w-PTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="gcg-n8-onb" customClass="Item1" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lke-uF-w4C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -95,6 +94,7 @@
                         <outlet property="timerLabel" destination="k98-Nl-iHB" id="x3U-GS-aeo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwW-3w-PTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1587" y="-179"/>
         </scene>
