@@ -26,14 +26,18 @@ class Item1: UIViewController {
         isCounting = false
         timer.invalidate()
         var newWorkout = Workout(duration: count, caloriesBurned: 1, distance: 1, averagePace: 1/count)
+        timerLabel.text = "00 : 00 : 00"
+        count = 0
     }
     
     @IBAction func startWorkout(_ sender: Any) {
         if isCounting {
+            endWorkoutButton.isHidden = false
             isCounting = false
             timer.invalidate() //stops the timer
             startButton.setTitle("START", for: .normal) //changes button text to start
         } else {
+            endWorkoutButton.isHidden = true
             isCounting = true
             startButton.setTitle("PAUSE", for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
