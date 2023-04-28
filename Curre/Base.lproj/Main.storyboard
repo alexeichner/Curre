@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -37,10 +38,76 @@
                     <view key="view" contentMode="scaleToFill" id="Bl2-uA-wUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-iJ-abf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="174" id="fHg-at-NIM" customClass="WorkoutTableViewCell" customModule="Curre" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="174"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHg-at-NIM" id="UEZ-id-zFT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-eU-gIp">
+                                                    <rect key="frame" x="10" y="10" width="150" height="154"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="2r6-Rf-Z1I"/>
+                                                    </constraints>
+                                                    <standardMapConfiguration key="preferredConfiguration"/>
+                                                </mapView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-ce-Ejx">
+                                                    <rect key="frame" x="170" y="21" width="214" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="CHX-3C-iSc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-zh-xA5">
+                                                    <rect key="frame" x="170" y="51" width="214" height="102"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KCR-ce-Ejx" secondAttribute="trailing" constant="10" id="0Ea-dN-U8W"/>
+                                                <constraint firstAttribute="bottom" secondItem="sz2-eU-gIp" secondAttribute="bottom" constant="10" id="4eP-Ke-4sP"/>
+                                                <constraint firstItem="KCR-ce-Ejx" firstAttribute="top" secondItem="UEZ-id-zFT" secondAttribute="topMargin" constant="10" id="OLG-06-yal"/>
+                                                <constraint firstItem="7OB-zh-xA5" firstAttribute="top" secondItem="KCR-ce-Ejx" secondAttribute="bottom" id="Pv9-xJ-dua"/>
+                                                <constraint firstItem="sz2-eU-gIp" firstAttribute="leading" secondItem="UEZ-id-zFT" secondAttribute="leading" constant="10" id="WWZ-KP-Otd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7OB-zh-xA5" secondAttribute="trailing" constant="10" id="Xxj-mM-Oup"/>
+                                                <constraint firstItem="KCR-ce-Ejx" firstAttribute="leading" secondItem="sz2-eU-gIp" secondAttribute="trailing" constant="10" id="Ys0-s7-eML"/>
+                                                <constraint firstItem="7OB-zh-xA5" firstAttribute="leading" secondItem="sz2-eU-gIp" secondAttribute="trailing" constant="10" id="hKH-hN-yeE"/>
+                                                <constraint firstItem="sz2-eU-gIp" firstAttribute="top" secondItem="UEZ-id-zFT" secondAttribute="top" constant="10" id="kTn-mN-A27"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7OB-zh-xA5" secondAttribute="bottom" constant="10" id="yzl-30-N4q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="KCR-ce-Ejx" id="NFK-bW-eSf"/>
+                                            <outlet property="mapView" destination="sz2-eU-gIp" id="SK1-Q6-ddg"/>
+                                            <outlet property="statsLabel" destination="7OB-zh-xA5" id="fIs-9E-7ZR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ugV-Nl-RK2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fuc-iJ-abf" firstAttribute="leading" secondItem="ugV-Nl-RK2" secondAttribute="leading" id="3p8-bh-dsw"/>
+                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="bottom" secondItem="fuc-iJ-abf" secondAttribute="bottom" id="M9r-UX-Gy0"/>
+                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="trailing" secondItem="fuc-iJ-abf" secondAttribute="trailing" id="P86-CZ-4OY"/>
+                            <constraint firstItem="fuc-iJ-abf" firstAttribute="top" secondItem="ugV-Nl-RK2" secondAttribute="top" id="VAT-Aq-5Jm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Past Workouts" id="Vv3-DV-LGe"/>
+                    <connections>
+                        <outlet property="table" destination="fuc-iJ-abf" id="WLq-Xi-SLe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgo-ba-xKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

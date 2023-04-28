@@ -10,11 +10,11 @@ import UIKit
 
 class WorkoutTable: UITableViewController {
     
+    @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tableView = UITableView()
-        tableView.frame = .infinite
+        
     }
 }
