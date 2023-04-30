@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class Item1: UIViewController {
 
@@ -64,6 +65,13 @@ class Item1: UIViewController {
         timeString += String(format: "%02d", seconds)
         return timeString
     }
+    
+    func addMap() {
+        var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 41.6883, longitude: 83.7165),
+        span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+        )
+        }
     
 }
 
