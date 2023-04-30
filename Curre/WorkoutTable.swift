@@ -7,14 +7,26 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class WorkoutTable: UITableViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var workouts:[Workout] = []
+    @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tableView = UITableView()
-        tableView.frame = .infinite
+    }
+    
+    func getCoreData() {
+        
+        
+        do {
+            workouts = try context.fetch(WorkoutEntity.fetchRequest())
+        } catch {
+            print("data not found")
+        }
     }
 }
