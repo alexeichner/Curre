@@ -7,14 +7,24 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class WorkoutTable: UITableViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var workouts:[Workout] = []
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    func getCoreData() {
         
+        
+        do {
+            //workouts = try context.fetch(Workout.fetch)
+        }
     }
 }
