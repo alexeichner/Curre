@@ -24,7 +24,9 @@ class WorkoutTable: UITableViewController {
         
         
         do {
-            //workouts = try context.fetch(Workout.fetch)
+            workouts = try context.fetch(WorkoutEntity.fetchRequest())
+        } catch {
+            print("data not found")
         }
     }
 }
