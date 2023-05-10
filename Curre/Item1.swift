@@ -10,9 +10,12 @@ import MapKit
 
 class Item1: UIViewController {
 
+
     @IBOutlet weak var endWorkoutButton: UIButton!
-    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    
     var timer = Timer()
     var count = 0
     var isCounting = false
@@ -65,13 +68,5 @@ class Item1: UIViewController {
         timeString += String(format: "%02d", seconds)
         return timeString
     }
-    
-    func addMap() {
-        var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 41.6883, longitude: 83.7165),
-        span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
-        )
-        }
-    
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14377D4F29F84B50006904C2 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14377D4E29F84B50006904C2 /* Workout.swift */; };
+		14B80CA32A0C081F000EA8BA /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B80CA22A0C081F000EA8BA /* mapViewController.swift */; };
 		3F0467D529F998850045A2DB /* Item1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0467D429F998850045A2DB /* Item1.swift */; };
 		3FD7334729F99E3900285FB3 /* WorkoutTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7334629F99E3900285FB3 /* WorkoutTable.swift */; };
 		3FD7334929FC80BD00285FB3 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		14377D4E29F84B50006904C2 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		14B80CA22A0C081F000EA8BA /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		3F0467D429F998850045A2DB /* Item1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item1.swift; sourceTree = "<group>"; };
 		3FD7334629F99E3900285FB3 /* WorkoutTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTable.swift; sourceTree = "<group>"; };
 		3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				3F0467D429F998850045A2DB /* Item1.swift */,
 				3FD7334629F99E3900285FB3 /* WorkoutTable.swift */,
 				C8C6168729F6FB33002C5000 /* ViewController.swift */,
+				14B80CA22A0C081F000EA8BA /* mapViewController.swift */,
 				C8C6168929F6FB33002C5000 /* Main.storyboard */,
 				C8C6168F29F6FB34002C5000 /* Assets.xcassets */,
 				C8C6169129F6FB34002C5000 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 				3FD7334929FC80BD00285FB3 /* WorkoutTableViewCell.swift in Sources */,
 				C8C6168629F6FB33002C5000 /* SceneDelegate.swift in Sources */,
 				3FD7334729F99E3900285FB3 /* WorkoutTable.swift in Sources */,
+				14B80CA32A0C081F000EA8BA /* mapViewController.swift in Sources */,
 				14377D4F29F84B50006904C2 /* Workout.swift in Sources */,
 				C8C6168E29F6FB33002C5000 /* Curre.xcdatamodeld in Sources */,
 			);
