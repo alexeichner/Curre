@@ -28,5 +28,10 @@ class WorkoutTable: UITableViewController {
         } catch {
             print("data not found")
         }
+        
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            // #warning Incomplete implementation, return the number of rows
+            return workouts.count
+        }
     }
 }
