@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="it5-N3-F0s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,6 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k98-Nl-iHB">
+                                <rect key="frame" x="20" y="127" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-qp-EVi">
+                                <rect key="frame" x="122" y="188" width="171" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START"/>
+                                <connections>
+                                    <action selector="startWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olb-G3-PyB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Gf-E0n">
+                                <rect key="frame" x="146" y="405" width="122" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="End Workout"/>
+                                <connections>
+                                    <action selector="endWorkoutFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHC-d6-NI5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -31,139 +61,37 @@
             </objects>
             <point key="canvasLocation" x="-580" y="-179"/>
         </scene>
-        <!--Past Workouts-->
+        <!--Item 2-->
         <scene sceneID="8za-Vv-ciQ">
             <objects>
-                <viewController id="SWC-LH-sWi" customClass="WorkoutTable" sceneMemberID="viewController">
+                <viewController id="SWC-LH-sWi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bl2-uA-wUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fuc-iJ-abf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="174" id="fHg-at-NIM" customClass="WorkoutTableViewCell" customModule="Curre" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="174"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHg-at-NIM" id="UEZ-id-zFT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="174"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz2-eU-gIp">
-                                                    <rect key="frame" x="10" y="10" width="150" height="154"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="2r6-Rf-Z1I"/>
-                                                    </constraints>
-                                                    <standardMapConfiguration key="preferredConfiguration"/>
-                                                </mapView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCR-ce-Ejx">
-                                                    <rect key="frame" x="170" y="21" width="214" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="CHX-3C-iSc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-zh-xA5">
-                                                    <rect key="frame" x="170" y="51" width="214" height="102"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="KCR-ce-Ejx" secondAttribute="trailing" constant="10" id="0Ea-dN-U8W"/>
-                                                <constraint firstAttribute="bottom" secondItem="sz2-eU-gIp" secondAttribute="bottom" constant="10" id="4eP-Ke-4sP"/>
-                                                <constraint firstItem="KCR-ce-Ejx" firstAttribute="top" secondItem="UEZ-id-zFT" secondAttribute="topMargin" constant="10" id="OLG-06-yal"/>
-                                                <constraint firstItem="7OB-zh-xA5" firstAttribute="top" secondItem="KCR-ce-Ejx" secondAttribute="bottom" id="Pv9-xJ-dua"/>
-                                                <constraint firstItem="sz2-eU-gIp" firstAttribute="leading" secondItem="UEZ-id-zFT" secondAttribute="leading" constant="10" id="WWZ-KP-Otd"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="7OB-zh-xA5" secondAttribute="trailing" constant="10" id="Xxj-mM-Oup"/>
-                                                <constraint firstItem="KCR-ce-Ejx" firstAttribute="leading" secondItem="sz2-eU-gIp" secondAttribute="trailing" constant="10" id="Ys0-s7-eML"/>
-                                                <constraint firstItem="7OB-zh-xA5" firstAttribute="leading" secondItem="sz2-eU-gIp" secondAttribute="trailing" constant="10" id="hKH-hN-yeE"/>
-                                                <constraint firstItem="sz2-eU-gIp" firstAttribute="top" secondItem="UEZ-id-zFT" secondAttribute="top" constant="10" id="kTn-mN-A27"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="7OB-zh-xA5" secondAttribute="bottom" constant="10" id="yzl-30-N4q"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="KCR-ce-Ejx" id="NFK-bW-eSf"/>
-                                            <outlet property="mapView" destination="sz2-eU-gIp" id="SK1-Q6-ddg"/>
-                                            <outlet property="statsLabel" destination="7OB-zh-xA5" id="fIs-9E-7ZR"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ugV-Nl-RK2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fuc-iJ-abf" firstAttribute="leading" secondItem="ugV-Nl-RK2" secondAttribute="leading" id="3p8-bh-dsw"/>
-                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="bottom" secondItem="fuc-iJ-abf" secondAttribute="bottom" id="M9r-UX-Gy0"/>
-                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="trailing" secondItem="fuc-iJ-abf" secondAttribute="trailing" id="P86-CZ-4OY"/>
-                            <constraint firstItem="fuc-iJ-abf" firstAttribute="top" secondItem="ugV-Nl-RK2" secondAttribute="top" id="VAT-Aq-5Jm"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Past Workouts" id="Vv3-DV-LGe"/>
-                    <connections>
-                        <outlet property="table" destination="fuc-iJ-abf" id="WLq-Xi-SLe"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Vv3-DV-LGe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgo-ba-xKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1588.4057971014495" y="491.51785714285711"/>
+            <point key="canvasLocation" x="-1587" y="492"/>
         </scene>
-        <!--Curent Workout-->
+        <!--Item 1-->
         <scene sceneID="sai-fl-Vhg">
             <objects>
-                <viewController id="gcg-n8-onb" customClass="Item1" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gcg-n8-onb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lke-uF-w4C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKa-qp-EVi">
-                                <rect key="frame" x="122" y="340" width="171" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="START"/>
-                                <connections>
-                                    <action selector="startWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Olb-G3-PyB"/>
-                                    <action selector="startWorkout:" destination="gcg-n8-onb" eventType="touchUpInside" id="o06-gw-ShW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Gf-E0n">
-                                <rect key="frame" x="146" y="429" width="122" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="End Workout"/>
-                                <connections>
-                                    <action selector="endWorkoutFunction:" destination="gcg-n8-onb" eventType="touchUpInside" id="NM2-xC-rne"/>
-                                    <action selector="endWorkoutFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHC-d6-NI5"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k98-Nl-iHB">
-                                <rect key="frame" x="20" y="249" width="374" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9t2-id-rGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Curent Workout" id="MDX-TU-KJ3"/>
-                    <connections>
-                        <outlet property="endWorkoutButton" destination="6nm-Gf-E0n" id="ATJ-bV-hRp"/>
-                        <outlet property="startButton" destination="tKa-qp-EVi" id="nZg-39-7IR"/>
-                        <outlet property="timerLabel" destination="k98-Nl-iHB" id="x3U-GS-aeo"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MDX-TU-KJ3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwW-3w-PTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1588.4057971014495" y="-179.46428571428569"/>
+            <point key="canvasLocation" x="-1587" y="-179"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F5P-Gi-Cgp">
@@ -172,7 +100,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q6k-M4-3J1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="gcg-n8-onb" kind="relationship" relationship="viewControllers" id="Fkw-WC-2Os"/>
@@ -188,9 +116,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
