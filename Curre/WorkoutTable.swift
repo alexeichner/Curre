@@ -12,12 +12,15 @@ import CoreData
 class WorkoutTable: UITableViewController {
     
     //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let defaults = UserDefaults.standard
     var workouts:[Workout] = []
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let workoutDefaults = defaults.array(forKey: "workouts")
     }
     
 //    func getCoreData() {
