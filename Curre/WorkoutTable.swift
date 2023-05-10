@@ -21,6 +21,7 @@ class WorkoutTable: UITableViewController {
         
         
         let workoutDefaults = defaults.array(forKey: "workouts")
+        setWorkout(workouts, forKey: "workouts")
     }
     
     func setWorkout<Workout>(_ workout: Workout, forKey: String) where Workout: Encodable
