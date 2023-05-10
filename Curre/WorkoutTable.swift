@@ -11,7 +11,7 @@ import CoreData
 
 class WorkoutTable: UITableViewController {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var workouts:[Workout] = []
     @IBOutlet weak var table: UITableView!
     
@@ -20,13 +20,15 @@ class WorkoutTable: UITableViewController {
         
     }
     
-    func getCoreData() {
-        
-        
-        do {
-          //  workouts = try context.fetch(WorkoutEntity.fetchRequest())
-        } catch {
-            print("data not found")
-        }
-    }
+//    func getCoreData() {
+//
+//
+//        do {
+//          //  workouts = try context.fetch(WorkoutEntity.fetchRequest())
+//        } catch {
+//            print("data not found")
+//        }
+//
+//
+//    }
 }
