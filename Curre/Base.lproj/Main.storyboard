@@ -83,6 +83,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Vv3-DV-LGe"/>
+                    <connections>
+                        <outlet property="table" destination="pKk-BY-dKC" id="pjb-PW-QfY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgo-ba-xKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,6 @@
 		3FD7334929FC80BD00285FB3 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */; };
 		C8C6168429F6FB33002C5000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6168329F6FB33002C5000 /* AppDelegate.swift */; };
 		C8C6168629F6FB33002C5000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6168529F6FB33002C5000 /* SceneDelegate.swift */; };
-		C8C6168829F6FB33002C5000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C6168729F6FB33002C5000 /* ViewController.swift */; };
 		C8C6168B29F6FB33002C5000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C6168929F6FB33002C5000 /* Main.storyboard */; };
 		C8C6168E29F6FB33002C5000 /* Curre.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8C6168C29F6FB33002C5000 /* Curre.xcdatamodeld */; };
 		C8C6169029F6FB34002C5000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C6168F29F6FB34002C5000 /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 		C8C6168029F6FB33002C5000 /* Curre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C6168329F6FB33002C5000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8C6168529F6FB33002C5000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C8C6168729F6FB33002C5000 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C8C6168A29F6FB33002C5000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8C6168D29F6FB33002C5000 /* Curre.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Curre.xcdatamodel; sourceTree = "<group>"; };
 		C8C6168F29F6FB34002C5000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				14377D4E29F84B50006904C2 /* Workout.swift */,
 				3F0467D429F998850045A2DB /* Item1.swift */,
 				3FD7334629F99E3900285FB3 /* WorkoutTable.swift */,
-				C8C6168729F6FB33002C5000 /* ViewController.swift */,
 				14B80CA22A0C081F000EA8BA /* mapViewController.swift */,
 				3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */,
 				C8C6168929F6FB33002C5000 /* Main.storyboard */,
@@ -157,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0467D529F998850045A2DB /* Item1.swift in Sources */,
-				C8C6168829F6FB33002C5000 /* ViewController.swift in Sources */,
 				C8C6168429F6FB33002C5000 /* AppDelegate.swift in Sources */,
 				3FD7334929FC80BD00285FB3 /* WorkoutTableViewCell.swift in Sources */,
 				C8C6168629F6FB33002C5000 /* SceneDelegate.swift in Sources */,

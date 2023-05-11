@@ -19,9 +19,6 @@ class WorkoutTable: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        let workoutDefaults = defaults.array(forKey: "workouts")
-//        setWorkout(workouts, forKey: "workouts")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,41 +26,12 @@ class WorkoutTable: UITableViewController {
         self.table.reloadData()
     }
     
-//    func setWorkout<Workout>(_ workout: Workout, forKey: String) where Workout: Encodable
-//    {
-//        let encoder = JSONEncoder()
-//        do {
-//            let data = try encoder.encode(workout)
-//            set(data, forKey: forKey)
-//            synchronize()
-//        } catch let encodeErr {
-//            print("Failed to encode object:", encodeErr)
-//        }
-//    }
-//
-//    func getWorkout<Workout>(forKey: String, castTo type: Workout.Type) -> Workout? where Workout: Decodable
-//    {
-//        guard let data = data(forKey: forKey) else { return nil }
-//        let decoder = JSONDecoder()
-//        do {
-//            let workout = try decoder.decode(type, from: data)
-//            return workout
-//        } catch let decodeError{
-//            print("Failed to decode object:" , decodeError)
-//            return nil
-//        }
-//    }
-    
     func getCoreData() {
-
-
         do {
             workouts = try context.fetch(WorkoutEntity.fetchRequest())
         } catch {
             print("data not found")
         }
-
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
