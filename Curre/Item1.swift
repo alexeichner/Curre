@@ -26,6 +26,7 @@ class Item1: UIViewController {
     }
 
     
+
     @IBAction func endWorkoutFunction(_ sender: Any) {
         isCounting = false
         timer.invalidate()
@@ -34,7 +35,7 @@ class Item1: UIViewController {
         count = 0
     }
     
-    @IBAction func startWorkout(_ sender: Any) {
+    @IBAction func startWorkoutFunction(_ sender: Any) {
         if isCounting {
             endWorkoutButton.isHidden = false
             isCounting = false

@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import CoreData
 
-class WorkoutTable: UITableViewController {
+class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults = UserDefaults.standard
@@ -18,7 +19,8 @@ class WorkoutTable: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        table.delegate = self
+        table.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,16 +36,21 @@ class WorkoutTable: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return workouts.count
+    }
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "Item", for: indexPath)
         let workout = workouts[indexPath.row]
         cell.textLabel?.text = workout.name
         cell.detailTextLabel?.text = "Time: \(workout.time), Distance: \(workout.distance)"
-        
+
         return cell
     }
 
