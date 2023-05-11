@@ -29,7 +29,7 @@ class Item1: UIViewController {
     @IBAction func endWorkoutFunction(_ sender: Any) {
         isCounting = false
         timer.invalidate()
-        var newWorkout = Workout(duration: count, caloriesBurned: 1, distance: 1, averagePace: 1/count)
+        //var newWorkout = Workout(duration: count, caloriesBurned: 1, distance: 1, averagePace: 1/count)
         timerLabel.text = "00 : 00 : 00"
         count = 0
     }
