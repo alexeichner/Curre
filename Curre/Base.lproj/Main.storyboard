@@ -37,18 +37,56 @@
         <!--Item 2-->
         <scene sceneID="8za-Vv-ciQ">
             <objects>
-                <viewController id="SWC-LH-sWi" sceneMemberID="viewController">
+                <viewController id="SWC-LH-sWi" customClass="WorkoutTable" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bl2-uA-wUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-BY-dKC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" textLabel="RPP-qF-zuL" detailTextLabel="hmP-4C-So6" rowHeight="81" style="IBUITableViewCellStyleValue1" id="PdF-cm-BUf" customClass="WorkoutTableViewCell" customModule="Curre" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PdF-cm-BUf" id="nYu-D4-hLO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RPP-qF-zuL">
+                                                    <rect key="frame" x="20" y="34" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hmP-4C-So6">
+                                                    <rect key="frame" x="361.33333333333331" y="34" width="32.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ugV-Nl-RK2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pKk-BY-dKC" firstAttribute="top" secondItem="ugV-Nl-RK2" secondAttribute="top" id="GIf-qJ-Jxn"/>
+                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="trailing" secondItem="pKk-BY-dKC" secondAttribute="trailing" id="Hph-L0-dSl"/>
+                            <constraint firstItem="pKk-BY-dKC" firstAttribute="leading" secondItem="ugV-Nl-RK2" secondAttribute="leading" id="rNy-3V-gOJ"/>
+                            <constraint firstItem="ugV-Nl-RK2" firstAttribute="bottom" secondItem="pKk-BY-dKC" secondAttribute="bottom" id="wJp-vm-vOc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Vv3-DV-LGe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgo-ba-xKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1587" y="492"/>
+            <point key="canvasLocation" x="-1626.0869565217392" y="535.71428571428567"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="sai-fl-Vhg">

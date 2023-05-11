@@ -75,12 +75,12 @@
 				3FD7334629F99E3900285FB3 /* WorkoutTable.swift */,
 				C8C6168729F6FB33002C5000 /* ViewController.swift */,
 				14B80CA22A0C081F000EA8BA /* mapViewController.swift */,
+				3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */,
 				C8C6168929F6FB33002C5000 /* Main.storyboard */,
-				C8C6168F29F6FB34002C5000 /* Assets.xcassets */,
 				C8C6169129F6FB34002C5000 /* LaunchScreen.storyboard */,
+				C8C6168F29F6FB34002C5000 /* Assets.xcassets */,
 				C8C6169429F6FB34002C5000 /* Info.plist */,
 				C8C6168C29F6FB33002C5000 /* Curre.xcdatamodeld */,
-				3FD7334829FC80BD00285FB3 /* WorkoutTableViewCell.swift */,
 			);
 			path = Curre;
 			sourceTree = "<group>";
