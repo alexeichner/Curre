@@ -53,5 +53,21 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         return cell
     }
+    
+    func deleteWorkout(indexPath: IndexPath) {
+        let workout = workouts[indexPath.row]
+        workouts.remove(at: indexPath.row)
+        context.delete(workout)
+        table.deleteRows(at: [indexPath], with: .fade)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Trash") {
+            [weak self] (action, view, completionHandler) in self?.deleteWorkout(indexPath: indexPath)
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 
 }
