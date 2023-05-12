@@ -12,17 +12,30 @@ class SaveWorkoutViewController: UIViewController {
     @IBOutlet weak var saveWorkoutButton: UITextField!
     @IBOutlet weak var distanceTextfield: UITextField!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var timeString = ""
+    var totalSeconds = 0
+    var timeOfDayString = "Afternoon"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(timeString)
+        print(totalSeconds)
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func saveWorkoutFunction(_ sender: Any) {
         let distance = distanceTextfield.text
+        if true { //check to see if distance is number
+            let workout = WorkoutEntity(context: context)
+            workout.name = "\(timeOfDayString) Run"
+            workout.time = timeString
+            workout.distance = Int64(distance!)!
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        } else {
+            //make pop up
+        }
         
     }
     

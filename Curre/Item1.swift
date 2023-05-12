@@ -19,6 +19,8 @@ class Item1: UIViewController {
     var timer = Timer()
     var count = 0
     var isCounting = false
+    var finalTime = ""
+    var finalCount = 0
     
     
     override func viewDidLoad() {
@@ -54,6 +56,8 @@ class Item1: UIViewController {
         let time = formatTime(seconds: count)
         let timeString = formatTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         timerLabel.text = timeString
+        finalTime = timeString
+        finalCount = count
     }
     
     func formatTime(seconds: Int) -> (Int, Int, Int) {
@@ -75,7 +79,8 @@ class Item1: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "saveSegue" {
             let viewController = segue.destination as! SaveWorkoutViewController
-            viewController.timeString = timerLabel.text!
+            viewController.timeString = finalTime
+            viewController.totalSeconds = finalCount
         }
     }
 }
