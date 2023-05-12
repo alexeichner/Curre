@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Workout: Codable{
+class Workout {
     
     var duration: Int = 0
     var caloriesBurned: Int = 0
