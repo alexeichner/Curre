@@ -69,5 +69,14 @@ class Item1: UIViewController {
         timeString += String(format: "%02d", seconds)
         return timeString
     }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveSegue" {
+            let viewController = segue.destination as! SaveWorkoutViewController
+            viewController.timeString = timerLabel.text!
+        }
+    }
 }
 
