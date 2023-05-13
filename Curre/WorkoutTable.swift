@@ -63,7 +63,7 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Trash") {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
             [weak self] (action, view, completionHandler) in self?.deleteWorkout(indexPath: indexPath)
             completionHandler(true)
         }
