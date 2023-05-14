@@ -69,5 +69,15 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedWorkout = workouts[indexPath.row]
+//        if let viewController = storyboard?.instantiateViewController(withIdentifier: "WorkoutViewController") as? WorkoutViewController {
+//            viewController.title = "\(selectedWorkout.name)"
+//            viewController.textLabel.text = "Time: \(selectedWorkout.time)\nDistance: \(selectedWorkout.distance)"
+//            navigationController?.pushViewController(viewController, animated: true)
+//        }
+//    }
+
 
 }

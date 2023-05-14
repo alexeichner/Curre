@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="it5-N3-F0s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="it5-N3-F0s">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="4Ax-R4-tmV" customClass="mapViewController" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ygn-yy-Jx8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOw-41-zEz">
@@ -31,14 +31,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iN-ye-EGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="-431"/>
+            <point key="canvasLocation" x="-688" y="-865"/>
         </scene>
         <!--Save Workout View Controller-->
         <scene sceneID="zzC-vz-S8o">
             <objects>
                 <viewController id="fyB-Kb-vQy" customClass="SaveWorkoutViewController" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sd6-dq-gc1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How many miles did you run?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voG-Kd-y9R">
@@ -59,6 +59,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveWorkoutFunction:" destination="fyB-Kb-vQy" eventType="touchUpInside" id="5DN-E1-PBd"/>
+                                    <segue destination="SWC-LH-sWi" kind="show" id="mNP-mE-CFL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Distance Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-Mo-jtd">
@@ -79,7 +80,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OT6-Es-DlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="219.64285714285714"/>
+            <point key="canvasLocation" x="270" y="-179"/>
+        </scene>
+        <!--Workout View Controller-->
+        <scene sceneID="yjo-Of-fJn">
+            <objects>
+                <viewController storyboardIdentifier="WorkoutViewController" id="xlV-v5-hhJ" customClass="WorkoutViewController" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2f-Hu-2h6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed1-fA-2wY">
+                                <rect key="frame" x="20" y="139" width="186" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PcM-rj-jv5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RG4-So-rRZ"/>
+                    <connections>
+                        <outlet property="textLabel" destination="ed1-fA-2wY" id="7qu-6t-Rmf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYl-da-riU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723.1884057971015" y="535.71428571428567"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="8za-Vv-ciQ">
@@ -90,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-BY-dKC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Item" textLabel="RPP-qF-zuL" detailTextLabel="hmP-4C-So6" rowHeight="81" style="IBUITableViewCellStyleValue1" id="PdF-cm-BUf" customClass="WorkoutTableViewCell" customModule="Curre" customModuleProvider="target">
@@ -130,6 +159,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Vv3-DV-LGe"/>
+                    <navigationItem key="navigationItem" id="zbB-g2-DHX"/>
                     <connections>
                         <outlet property="table" destination="pKk-BY-dKC" id="pjb-PW-QfY"/>
                     </connections>
@@ -138,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="-1626.0869565217392" y="535.71428571428567"/>
         </scene>
-        <!--Item 1-->
+        <!--Item1-->
         <scene sceneID="sai-fl-Vhg">
             <objects>
                 <viewController id="gcg-n8-onb" customClass="Item1" customModule="Curre" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,7 +219,7 @@
                         <viewLayoutGuide key="safeArea" id="9t2-id-rGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="MDX-TU-KJ3"/>
+                    <navigationItem key="navigationItem" id="Bhp-xm-zfp"/>
                     <connections>
                         <outlet property="endWorkoutButton" destination="le5-tL-TMy" id="rek-j0-8eV"/>
                         <outlet property="startButton" destination="1aK-Wu-dfq" id="hAR-pY-Keq"/>
@@ -198,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwW-3w-PTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1587" y="-179"/>
+            <point key="canvasLocation" x="-678.26086956521749" y="-179.46428571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F5P-Gi-Cgp">
@@ -210,7 +240,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gcg-n8-onb" kind="relationship" relationship="viewControllers" id="Fkw-WC-2Os"/>
+                        <segue destination="OSE-6T-p0A" kind="relationship" relationship="viewControllers" id="Fkw-WC-2Os"/>
                         <segue destination="SWC-LH-sWi" kind="relationship" relationship="viewControllers" id="P35-YY-dWu"/>
                     </connections>
                 </tabBarController>
@@ -218,7 +248,29 @@
             </objects>
             <point key="canvasLocation" x="-2435" y="150"/>
         </scene>
+        <!--Item 1-->
+        <scene sceneID="ysN-Cf-ccP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OSE-6T-p0A" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MDX-TU-KJ3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nG-kR-GrI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gcg-n8-onb" kind="relationship" relationship="rootViewController" id="tq8-M2-RBb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxn-0S-wQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1588.4057971014495" y="-179.46428571428569"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mNP-mE-CFL"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
