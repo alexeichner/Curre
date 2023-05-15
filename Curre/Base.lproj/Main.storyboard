@@ -145,6 +145,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xlV-v5-hhJ" kind="show" identifier="showWorkoutStats" id="PyG-8g-oaY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -16,11 +16,14 @@ class SaveWorkoutViewController: UIViewController {
     var timeString = ""
     var totalSeconds = 0
     var timeOfDayString = "Afternoon"
+    let date = Date()
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(timeString)
         print(totalSeconds)
+        checkTimeOfDay()
         // Do any additional setup after loading the view.
     }
     
@@ -32,11 +35,17 @@ class SaveWorkoutViewController: UIViewController {
             workout.name = "\(timeOfDayString) Run"
             workout.time = timeString
             workout.distance = Int64(distance!)!
+            workout.date = date
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
             //make pop up
         }
         
+    }
+    
+    func checkTimeOfDay() {
+        dateFormatter.dateFormat = "hh"
+        print("\(dateFormatter.string(from: date))")
     }
     
     

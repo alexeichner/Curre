@@ -48,8 +48,10 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "Item", for: indexPath)
         let workout = workouts[indexPath.row]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         cell.textLabel?.text = workout.name
-        cell.detailTextLabel?.text = "Time: \(workout.time), Distance: \(workout.distance)"
+        cell.detailTextLabel?.text = "\(dateFormatter.string(from: workout.date!))"
 
         return cell
     }
@@ -79,5 +81,9 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        }
 //    }
 
+    // MARK: - Navigation
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 }
