@@ -30,7 +30,7 @@ class SaveWorkoutViewController: UIViewController {
 
     @IBAction func saveWorkoutFunction(_ sender: Any) {
         let distance = distanceTextfield.text
-        if false { //check to see if distance is number
+        if isNumber(number: distance ?? "none") { //check to see if distance is number
             let workout = WorkoutEntity(context: context)
             workout.name = "\(timeOfDayString) Run"
             workout.time = timeString
@@ -49,6 +49,26 @@ class SaveWorkoutViewController: UIViewController {
     func checkTimeOfDay() {
         dateFormatter.dateFormat = "hh"
         print("\(dateFormatter.string(from: date))")
+    }
+    
+    func isNumber(number: String) -> Bool {
+        if number == "none" {
+            return false
+        } else {
+            var totalCharacters = number.count
+            var characterCount = 0
+            for digit in number {
+                if (digit=="0") || (digit=="1") || (digit=="2") || (digit=="3") || (digit=="4") || (digit=="5") || (digit=="6") || (digit=="7") || (digit=="8") || (digit=="9") {
+                    characterCount += 1
+                    if characterCount == totalCharacters {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+            }
+            return true
+        }
     }
     
     
