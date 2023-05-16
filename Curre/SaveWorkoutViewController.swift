@@ -30,19 +30,19 @@ class SaveWorkoutViewController: UIViewController {
 
     @IBAction func saveWorkoutFunction(_ sender: Any) {
         let distance = distanceTextfield.text
-        if isNumber(number: distance ?? "none") { //check to see if distance is number
+        //if isNumber(number: distance ?? "none") { //check to see if distance is number
             let workout = WorkoutEntity(context: context)
             workout.name = "\(timeOfDayString) Run"
             workout.time = timeString
             workout.distance = Int64(distance!)!
             workout.date = date
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
-        } else {
-            let alertController = UIAlertController(title: "Error", message: "Please Enter a numeric digit. Example: 4", preferredStyle: .alert)
-            present(alertController, animated: true)
-            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
-            return
-        }
+        // } else {
+//            let alertController = UIAlertController(title: "Error", message: "Please Enter a numeric digit. Example: 4", preferredStyle: .alert)
+//            present(alertController, animated: true)
+//            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+//            return
+       // }
         performSegue(withIdentifier: "saveWorkoutSegue", sender: nil)
     }
     
