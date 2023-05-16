@@ -10,10 +10,13 @@ import UIKit
 class WorkoutViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
+    
+    var workout: WorkoutEntity!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textLabel.text = "Time: \(String(describing: workout.time)) \nDistance: \(workout.distance)"
     }
     
 

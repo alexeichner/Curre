@@ -30,7 +30,7 @@ class SaveWorkoutViewController: UIViewController {
 
     @IBAction func saveWorkoutFunction(_ sender: Any) {
         let distance = distanceTextfield.text
-        if true { //check to see if distance is number
+        if false { //check to see if distance is number
             let workout = WorkoutEntity(context: context)
             workout.name = "\(timeOfDayString) Run"
             workout.time = timeString
@@ -38,9 +38,12 @@ class SaveWorkoutViewController: UIViewController {
             workout.date = date
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
-            //make pop up
+            let alertController = UIAlertController(title: "Error", message: "Please Enter a numeric digit. Example: 4", preferredStyle: .alert)
+            present(alertController, animated: true)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            return
         }
-        
+        performSegue(withIdentifier: "saveWorkoutSegue", sender: nil)
     }
     
     func checkTimeOfDay() {

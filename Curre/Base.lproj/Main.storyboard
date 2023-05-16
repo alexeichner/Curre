@@ -59,7 +59,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="saveWorkoutFunction:" destination="fyB-Kb-vQy" eventType="touchUpInside" id="5DN-E1-PBd"/>
-                                    <segue destination="SWC-LH-sWi" kind="show" id="mNP-mE-CFL"/>
+                                    <segue destination="SWC-LH-sWi" kind="show" id="N0A-4o-G6s"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Distance Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9c-Mo-jtd">
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYl-da-riU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-723.1884057971015" y="535.71428571428567"/>
+            <point key="canvasLocation" x="-678" y="536"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="8za-Vv-ciQ">
@@ -272,7 +272,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mNP-mE-CFL"/>
+        <segue reference="N0A-4o-G6s"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">

@@ -15,6 +15,7 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults = UserDefaults.standard
     var workouts:[WorkoutEntity] = []
+    var displayWorkout: WorkoutEntity!
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
@@ -72,18 +73,15 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedWorkout = workouts[indexPath.row]
-//        if let viewController = storyboard?.instantiateViewController(withIdentifier: "WorkoutViewController") as? WorkoutViewController {
-//            viewController.title = "\(selectedWorkout.name)"
-//            viewController.textLabel.text = "Time: \(selectedWorkout.time)\nDistance: \(selectedWorkout.distance)"
-//            navigationController?.pushViewController(viewController, animated: true)
-//        }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedWorkout = workouts[indexPath.row]
+        displayWorkout = selectedWorkout
+    }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        let viewController = segue.destination as! WorkoutViewController
+        viewController.workout = displayWorkout
     }
 }
