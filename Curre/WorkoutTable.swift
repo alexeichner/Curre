@@ -74,14 +74,25 @@ class WorkoutTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Inside select function")
         let selectedWorkout = workouts[indexPath.row]
         displayWorkout = selectedWorkout
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: "WorkoutViewController") as? WorkoutViewController {
+            print("inside if let")
+            viewController.workout = displayWorkout
+            print("Before prgrammatic segue")
+//            navigationController?.pushViewController(viewController, animated: true)
+//            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true)
+            
+            print("after prgrammtic segue")
+        }
     }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewController = segue.destination as! WorkoutViewController
-        viewController.workout = displayWorkout
+        
     }
 }

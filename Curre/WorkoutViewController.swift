@@ -15,11 +15,15 @@ class WorkoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        textLabel.text = "Time: \(String(describing: workout.time)) \nDistance: \(workout.distance)"
+       
     }
     
 
+    override func viewDidAppear(_ animated: Bool) {
+        textLabel.text = "Time taken: \(workout.time ?? "00 : 00 : 00") \n\nDistance traveled: \(workout.distance) miles"
+    }
     /*
     // MARK: - Navigation
 

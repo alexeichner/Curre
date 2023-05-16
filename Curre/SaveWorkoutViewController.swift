@@ -15,7 +15,7 @@ class SaveWorkoutViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var timeString = ""
     var totalSeconds = 0
-    var timeOfDayString = "Afternoon"
+    var timeOfDayString = ""
     let date = Date()
     let dateFormatter = DateFormatter()
     
